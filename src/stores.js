@@ -10,7 +10,7 @@ const details = (set, get) => ({
   setSelectedStyle: (data) => set({ selectedStyle: data }),
   selectedSize: '',
   setSelectedSize: (data) => set({ selectedSize: data }),
-  selectedQuantity: 1,
+  selectedQuantity: '1',
   setSelectedQuantity: (data) => set({ selectedQuantity: data }),
   showSizeSelector: false,
   // TODO: Combine the two toggle functions to be a single function
@@ -81,6 +81,14 @@ const questionsStore = create(
     maxAnswersArr: [],
     setMaxAnswersArr: (answerArr) => set(() => ({
       maxAnswersArr: answerArr,
+    })),
+    questionModalToggle: false,
+    setQuestionModalToggle: () => set((state) => ({
+      questionModalToggle: !state.questionModalToggle,
+    })),
+    answerModalToggle: false,
+    setAnswerModalToggle: () => set((state) => ({
+      answerModalToggle: !state.answerModalToggle,
     })),
     // dogs: 999,
     // increaseDogs: () => set((state) => ({ dogs: state.dogs + 1 })),
