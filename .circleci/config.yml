@@ -3,7 +3,6 @@ orbs:
   node: circleci/node@5.0.2
 jobs:
   build:
-    working_directory: ~/repo
     docker:
       - image: cimg/node:16.14
     steps:
@@ -18,7 +17,7 @@ jobs:
           name: Run Tests
           command: yarn test
       - store_artifacts:
-          path: ~/repo/test_artifacts
+          path: ~/tests/test_artifacts
       - store_test_results:
           path: test-results
 
