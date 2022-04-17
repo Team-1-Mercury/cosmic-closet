@@ -178,5 +178,3 @@ sketch
 # compression and stats
 stats.json
 public/bundle.js.gz
-config_test.yml
-tests/test_file_archive.archive
