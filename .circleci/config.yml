@@ -8,6 +8,3 @@ jobs:
       - run:
           name: Check Yarn Version
           command: yarn -v
-      - run:
-          name: Install Yarn
-          command: "curl -o- -L https://yarnpkg.com/install.sh | bash"
