@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/base:stable
+      - image: cimg/node:stable
     steps:
       - checkout
       - run:
