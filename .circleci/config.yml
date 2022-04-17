@@ -19,7 +19,7 @@ jobs:
       - store_artifacts:
           path: ~/tests/test_artifacts
       - store_test_results:
-          path: test-results
+          path: ~/tests/test_results
 
 workflows:
   run-tests-workflow:
