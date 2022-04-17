@@ -7,6 +7,7 @@ import { reviewStore } from '../../../stores.js';
 import './LeftColumn.scss';
 
 function LeftColumn() {
+  // could add a || on metaRatings to introduce test data
   const metaRatings = reviewStore((state) => state.ratings);
   const { characteristics } = metaRatings;
   if (characteristics) {

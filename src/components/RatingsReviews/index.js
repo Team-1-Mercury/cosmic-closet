@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 export { default as Buttons } from './Buttons/Buttons.jsx';
 export { default as ComfortScale } from './ComfortScale/ComfortScale.jsx';
 export { default as FitScale } from './FitScale/FitScale.jsx';
@@ -15,4 +16,5 @@ export { default as Sort } from './Sort/Sort.jsx';
 export { default as Star } from './Star/Star.jsx';
 export { default as StarRating } from './StarRating/StarRating.jsx';
 export { default as Title } from './Title/Title.jsx';
+export { default as Link } from './Title/Title.jsx';
 export { default as WidthScale } from './WidthScale/WidthScale.jsx';
