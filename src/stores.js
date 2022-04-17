@@ -1,5 +1,4 @@
 import create from 'zustand';
-import { devtools } from 'zustand/middleware';
 
 const details = (set, get) => ({
   allProducts: [],
@@ -27,12 +26,10 @@ const details = (set, get) => ({
     }
   },
 });
-const detailStore = create(devtools(details));
+const detailStore = create((details));
 
 const questionsStore = create(
-  // To be able to see multiple stores in Redux DevTools, set the selector in the
-  // extension to "Autoselect instances"
-  devtools((set) => ({
+  ((set) => ({
     questions: [],
     setQuestions: (data) => set(() => ({ questions: data })),
     answers: [],
@@ -1757,7 +1754,7 @@ const testRelevantReviews = {
 };
 
 const reviewStore = create(
-  devtools((set) => ({
+  ((set) => ({
     averageRating: 0,
     setAverageRating: (data) => set({ averageRating: data }),
     helpfulReviews: testHelpfulReviews,
