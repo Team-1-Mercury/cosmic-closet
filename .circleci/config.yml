@@ -10,6 +10,9 @@ jobs:
       - run:
           name: Check Yarn Version
           command: yarn -v
+      - store_artifacts:
+          path: ~/tests/test_artifacts
+          destination: yarn-version
       - run:
           name: Install Dependencies
           command: yarn install --immutable
@@ -18,8 +21,9 @@ jobs:
           command: yarn test
       - store_artifacts:
           path: ~/tests/test_artifacts
+          destination: yarn-test
       - store_test_results:
-          path: ~/tests/test_results
+          path: test-results
 
 workflows:
   run-tests-workflow:
