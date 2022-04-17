@@ -12,10 +12,7 @@ jobs:
           key: yarn-packages-{{ checksum yarn.lock }}
       - run:
           name: Install Dependencies
-          commands:
-            - echo entered the install dependencies phase...
-            - yarn install --immutable
-            - echo install dependencies complete
+          command: yarn install --immutable
       - save_cache:
           key: yarn-packages-{{ checksum yarn.lock }}
           paths:
