@@ -10,7 +10,7 @@ jobs:
           name: Install Yarn
           commands:
             - echo entered the install phase...
-            - curl -o- -L https://yarnpkg.com/install.sh | bash
+            - "curl -o- -L https://yarnpkg.com/install.sh | bash"
             - echo install complete
           finally:
             - echo finally install
